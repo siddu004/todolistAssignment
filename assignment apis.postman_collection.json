@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "f2c5bd37-9cce-48f3-88bc-a2b1aa2e278c",
+		"name": "assignment apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/users/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullName\":\"Siddharth Gollapudi\",\n\t\"email\":\"sid@gmail.com\",\n\t\"password\":\"siddu004\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/users/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"sid@gmail.com\",\n\t\"password\":\"siddu004\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/todolist/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTczZjcyMWIyZTk3ZjIyOThlNjk1MDciLCJpYXQiOjE1ODQ2NTgyOTd9.GjEyrtqi27cvBHQ3ub2OEwA8ebMvmna9tJI9Bn0P35o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"user_id\" :\"5e73f721b2e97f2298e69507\",\n\t\"content\" : \"task 1\"\n\t\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/todolist/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todolist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/todolist/5e73fbe3e38fd43530b62cfc",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTczZjcyMWIyZTk3ZjIyOThlNjk1MDciLCJpYXQiOjE1ODQ2NjA4MDF9.21kErVckyHSDzRrl3EZSaai9fd2FHTBvU38-xv5xzR4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/todolist/5e73fbe3e38fd43530b62cfc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todolist",
+						"5e73fbe3e38fd43530b62cfc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/todolist/5e73fbe3e38fd43530b62cfc",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTczZjcyMWIyZTk3ZjIyOThlNjk1MDciLCJpYXQiOjE1ODQ2NjI2ODJ9.ScKesn9XU1dzZqs3emHFufVrD0XJnidAqlIuAXrNR2Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"content\":\"Task 1 (updated)\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/todolist/5e73fbe3e38fd43530b62cfc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todolist",
+						"5e73fbe3e38fd43530b62cfc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/todolist/5e74088a8619a15454c90678",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTczZjcyMWIyZTk3ZjIyOThlNjk1MDciLCJpYXQiOjE1ODQ2NjI2ODJ9.ScKesn9XU1dzZqs3emHFufVrD0XJnidAqlIuAXrNR2Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/todolist/5e74088a8619a15454c90678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todolist",
+						"5e74088a8619a15454c90678"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/todolist/user/5e73f721b2e97f2298e69507",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTczZjcyMWIyZTk3ZjIyOThlNjk1MDciLCJpYXQiOjE1ODQ2NjI2ODJ9.ScKesn9XU1dzZqs3emHFufVrD0XJnidAqlIuAXrNR2Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/todolist/user/5e73f721b2e97f2298e69507",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todolist",
+						"user",
+						"5e73f721b2e97f2298e69507"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
